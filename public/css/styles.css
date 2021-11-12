@@ -1,0 +1,437 @@
+html, body {
+  /* height:100%; */
+  min-height: 100%;
+  /* width: 100%; */
+  color:white;
+}
+body {
+   height:100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../assets/Background.jpg");
+  margin: 0;
+  align-content: center;
+  /* overflow: hidden; */
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 14px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.content {
+  position: relative;
+  margin: 30px;
+  overflow: auto;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+button{
+  color:white;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: inherit;
+  transition: 0.1s;
+}
+button:hover{
+  transform:scale(1.2);
+}
+
+a{
+  color:white;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.1s ease-out;
+}
+.largewindow a:hover{
+  background-color: grey;
+}
+#buddy_load{
+  /* visibility:hidden; */
+}
+#buddy_load li{
+    transition: background-color 0.1s ease-out;
+}
+#buddy_load li:hover{
+  background-color: rgba(0, 0, 0, 0.6);
+}
+/* The following renders the icons depending on how many color submissions the participant had */
+.participant0::before{
+  content:'';
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  width: 30px;
+  background:url("../icons/axe_0.gif") no-repeat;
+  background-size: 30px;
+  position:relative;
+  margin-right: 20px;z-index:0;}
+.participant1::before{
+  content:'';
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  width: 30px;
+  background:url("../icons/axe_1.gif") no-repeat;
+  background-size: 30px;
+  position:relative;
+  margin-right: 20px;z-index:0;}
+.participant2::before{
+  content:'';
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  width: 30px;
+  background:url("../icons/axe_2.gif") no-repeat;
+  background-size: 30px;
+  position:relative;
+  margin-right: 20px;z-index:0;}
+  .fullBody{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+  }
+.participant3::before{
+  content:'';
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  width: 30px;
+  background:url("../icons/axe_3.gif") no-repeat;
+  background-size: 30px;
+  position:relative;
+  margin-right: 20px;z-index:0;}
+.participant4::before{
+  content:'';
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  width: 30px;
+  background:url("../icons/axe_4.gif") no-repeat;
+  background-size: 30px;
+  position:relative;
+  margin-right: 20px;z-index:0;}
+.participant5::before{
+  content:'';
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  width: 30px;
+  background:url("../icons/axe_5.gif") no-repeat;
+  background-size: 30px;
+  position:relative;
+  margin-right: 20px;z-index:0;}
+.participant6::before{
+  content:'';
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  width: 30px;
+  background:url("../icons/axe_6.gif") no-repeat;
+  background-size: 30px;
+  position:relative;
+  margin-right: 20px;z-index:0;}
+.participant7::before{
+  content:'';
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  width: 30px;
+  background:url("../icons/axe_7.gif") no-repeat;
+  background-size: 30px;
+  position:relative;
+  margin-right: 20px;z-index:0;}
+.Home {
+  width: 100px;
+  height: 35px;
+  align-content: center;
+  margin: 30px;
+  margin-bottom: 5px;
+  padding: 0;
+}
+
+.intro {
+  text-align: center;
+  margin: auto 300px auto 300px;
+}
+
+@media only screen and (max-width: 1080px) {
+  .intro {
+    text-align: center;
+    margin: auto 50px auto 50px;
+    font-size: 13px;
+  }
+}
+
+.scroll {
+  overflow: auto;
+  height: 100%;
+  display:flex;
+flex-direction:column;
+}
+.Hakim{
+  margin-left: 25px;
+  display: none;
+}
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: grey;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: grey;
+}
+
+.intro p {
+}
+
+
+.tag-hold {
+  padding-top: 1px;
+  padding-left: 15px;
+}
+
+.Just_Suc, .OG_n_Suc, .Suc_n_OG {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.05);
+  margin: 30px;
+}
+
+#piclist {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding-bottom: 60px;
+  padding-top:10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+#piclist li {
+  margin: 10px;
+}
+
+#piclist li img {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+}
+
+.content ul {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.content ul li {
+  display:flex;
+  flex-direction: row;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.content ul li a {
+  display:flex;
+  flex-direction: row;
+  padding:5px;
+  justify-content:flex-start;
+  flex: 1 0 auto;
+  text-decoration: none;
+}
+@media only screen and (max-width: 850px) {
+  .Banner {
+    width: 60%;
+    height: 250px;
+    image-rendering: -webkit-optimize-contrast;
+    background: url("../assets/logo.png") no-repeat;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    align-content: center;
+    margin: 15px auto auto auto;
+  }
+}
+@media only screen and (min-width: 851px) {
+  .Banner {
+    width: 50%;
+    height: 250px;
+    image-rendering: -webkit-optimize-contrast;
+    background: url("../assets/logo.png") no-repeat;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    align-content: center;
+    margin: 15px auto auto auto;
+  }
+}
+
+.largewindow {
+  z-index: 2;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  overflow: auto;
+}
+.largewindow .largeimageload, .largewindow .buttons{
+  height:630px;
+  position: absolute;
+  top:40px;
+}
+.largewindow .buttons{
+  position: relative;
+  top:650px;
+}
+.disable {
+  display: none;
+}
+.enable{
+  display:block;
+}
+.largeimageload {
+  height: 750px;
+}
+
+.largeimageload img {
+  /* display:none; */
+  max-width: 100%;
+  max-height: 100%;
+  margin:auto;
+  display: block;
+  object-fit: contain;
+}
+footer{
+  margin-top:auto;
+position:relative;
+left:0px;
+bottom:0px;
+height:30px;
+width:100%;
+/* background:#999; */
+}
+.box {
+  text-align: center;
+  width: 310px;
+  height: 100px;
+}
+
+.whitespace {
+  font-size: 17px;
+  position: relative;
+  bottom:10px
+}
+.Rough{
+  position: relative;
+  right:20px
+}
+.Finished{
+  position: relative;
+  left: 20px;
+}
+.ogname,.sucname{
+  margin:auto;
+  position: relative;
+  font-size: 23px;
+  bottom:5px;
+}
+.ogname{
+  margin-right:30px;
+  float: left;
+  position: relative;
+  left: 100px;
+}
+.sucname{
+  margin-left:30px;
+  float:right;
+  position: relative;
+  right: 100px;
+}
+.Exit p{
+  margin-bottom:25px;
+  font-size: 20px;
+}
+.loader{
+  visibility: visible;
+}
+p{
+  text-decoration: done;
+}
+/* .ContestantContent{
+  display: none;
+} */
+.loadersmall{
+  display: block;
+  border: 16px solid black;
+  border-radius: 50%;
+  border-top: 16px solid  #006400;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+.loader{
+position: absolute;
+left: 45%;
+top: 45%;
+border: 16px solid black;
+border-radius: 50%;
+border-top: 16px solid  #006400;
+width: 120px;
+height: 120px;
+-webkit-animation: spin 2s linear infinite; /* Safari */
+animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.Person_Page{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 30px;
+  margin-bottom: 5px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), transparent 95%);
+}
+.Hotbar{
+  background-color: Black;
+}
+.largeimageload .loadersmall{
+  position: relative;
+  top: 250px;
+}
+.Originator{
+  display: block;
+  margin: 25px;
+  image-rendering: -webkit-optimize-contrast;
+  background: url("../assets/LeftButton.png") no-repeat;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.Successor{
+  display: block;
+  margin: 25px;
+  image-rendering: -webkit-optimize-contrast;
+  background: url("../assets/RightButton.png") no-repeat;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.buttons,.largeimageload{
+  display: inline;
+}

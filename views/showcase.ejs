@@ -1,0 +1,83 @@
+<%-include("header")-%>
+  <div class="scroll">
+    <!-- <div class = "loader"></div> -->
+<%-include("homebar")-%>
+    <p class = "Person_Page"><%=name%> Page</p>
+    <div id = "modal" class= <%= overlay != false ? "enable" : "disable"%>>
+      <div class="largewindow">
+        <!-- <a class="BUTTON_IDU" onclick="closetobig()">X</a> -->
+        <div class="largeimageload">
+          <% if(focusedImage != ""){%>
+          <img src=<%=`../submissions/${focusedImage}`%>>
+          <%}%>
+        </div>
+        <div class = "buttons">
+          <button class="box" type="button" name="button" id = "exitButton" original=<%= `/submissions/?name=${name}`%>>
+              <div class = "Exit">
+                <p>Exit</p>
+              </div>
+          </button>
+          <button id = "original" class="Originator box" type="button" name="button">
+            <a  id = "originalLink" href = <%=`/submissions?name=${ogname}`%>>
+              <p class="whitespace Rough">Rough By</p>
+              <p id = "originatorName" class="ogname"> <%=ogname%> </p>
+            </a>
+          </button>
+          <div id = "colored" class=<%= coloredName != "" ? "enable": "disable" %>>
+            <button class="Successor box " type="button" name="button">
+              <a id = "colorLink" href = <%=`/submissions?name=${coloredName}`%>>
+                <p class="whitespace Finished">Finished By</p>
+                <p id= "colorName" class="sucname"><%=coloredName%></p>
+              </a>
+            </button>
+          </div>
+      </div>
+      </div>
+    </div>
+    <!-- <div class = "loadersmall"></div>  -->
+    <div class = "ContestantContent">
+      <div class="Just_Suc">
+        <div class="tag-hold">
+          <p class="Tag">Rough Work By <%=name%></p>
+        </div>
+        <ul id="piclist">
+          <% for(var i = 0; i < rough.length; i++){%>
+            <li>
+                <button style="display: block;" class ="selectors" query=<%=`/submissions/?name=${name}&title=${rough[i]}`%> bigImage=<%=`${rough[i]}`%>>
+                      <img src=<%=`../thumbnails/${rough[i]}`%>>
+                </button>
+            </li>
+          <%}%>
+        </ul>
+      </div>
+      <div class="OG_n_Suc">
+        <div class="tag-hold">
+          <p class="Tag">Completed By Others</p>
+        </div>
+        <ul id="piclist">
+          <% for(var i = 0; i < others.length; i++){%>
+            <li>
+                <button style="display: block;" class ="selectors" query=<%=`/submissions/?name=${name}&title=${others[i]}`%> bigImage=<%=`${others[i]}`%>>
+                      <img src=<%=`../thumbnails/${others[i]}`%>>
+                </button>
+            </li>
+          <%}%>
+        </ul>
+      </div>
+      <div class="Suc_n_OG">
+        <div class="tag-hold">
+          <p class="Tag">Completed By <%=name%></p>
+        </div>
+        <ul id="piclist">
+          <% for(var i = 0; i < participantColored.length; i++){%>
+            <li>
+                <button  style="display: block;" class ="selectors" query=<%=`/submissions/?name=${name}&title=${participantColored[i]}`%> bigImage=<%=`${participantColored[i]}`%>>
+                      <img src=<%=`../thumbnails/${participantColored[i]}`%>>
+                </button>
+            </li>
+          <%}%>
+        </ul>
+      </div>
+    </div>
+    </div>
+    <%-include("Footer")-%>

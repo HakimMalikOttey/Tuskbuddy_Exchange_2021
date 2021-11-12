@@ -1,0 +1,18 @@
+    <%-include("header")-%>
+    <div class = "scroll">
+    <div class="Banner">
+    </div>
+    <div class = "intro">
+      <%-intro%>
+    </div>
+    <div class = content>
+      <ul id = "buddy_load">
+        <% for (var i  = 0; i < participants.length;i++){%>
+          <li class=<%=`participant${participants[i].amount}`%>>
+              <a href = <%=`/submissions?name=${participants[i].name}`%>><%=participants[i].name%></a>
+          </li>
+        <%}%>
+      </ul>
+    </div>
+    </div>
+    <%-include("Footer")-%>
